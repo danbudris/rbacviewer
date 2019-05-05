@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: rbacvue
-        image: danbudris/rbac-viewer:latest
+        image: danbudris/rbacviewer:latest
         ports:
         - containerPort: 8080
       serviceAccountName: rbac-viewer
