@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rbac-viewer
+  labels:
+    app: rbac-viewer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rbac-viewer
+  template:
+    metadata:
+      labels:
+        app: rbac-viewer
+    spec:
+      containers:
+      - name: rbacvue
+        image: danbudris/rbac-viewer:latest
+        ports:
+        - containerPort: 8080
+      serviceAccountName: rbac-viewer
