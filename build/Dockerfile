@@ -1,3 +1,3 @@
 FROM debian
-COPY ./app /app
-ENTRYPOINT /app
+COPY ./rbacviewer /rbacviewer
+ENTRYPOINT /rbacviewer
